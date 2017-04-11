@@ -25,21 +25,6 @@
         else
             ;
     }
-    else if(action.equals("detail")){
-        String movie_name = request.getParameter("movie_name");
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection( "jdbc:mysql://localhost:3306/ThumbsUp", "root", "thumbsup");
-            query = "select * from movies where name="+movie_name;
-            st = con.createStatement();
-            rs = st.executeQuery(query);
-            if(rs.next()){
-                  response.sendRedirect("single.jsp?movie_name="+movie_name);
-            }
-        }catch(Exception e){
-            out.println(e);
-        }
-    }
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -67,7 +52,7 @@
 		<div id="site-content">
 			<header class="site-header">
 				<div class="container">
-					<a href="index.html" id="branding">
+					<a href="index.jsp" id="branding">
 						<img src="dummy/logo.png" alt="" class="logo">
 						<div class="logo-copy">
 							<h1 class="site-title">ThumbsUp</h1>
@@ -82,6 +67,7 @@
 							<li class="menu-item"><a href="about.jsp">About</a></li>
 							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
+                                                        <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
 						<form action="#" class="search-form">
@@ -103,7 +89,6 @@
         st = con.createStatement();
         query = "SELECT name FROM movies as movie1";
         cara = st.executeQuery(query);
-        //if(cara.next()) {
     
     if(cara.next()){
 %>
@@ -125,32 +110,20 @@
 								</div>
 							</div>
 	
-<%
-    }
-    }
-    catch(Exception e){
-            out.println(e);
-        }
-    try{        
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ThumbsUp", "root", "thumbsup");
-        st = con.createStatement();
-        //query = "select image_port from ( select rownum rn,image_port from ( select * from movies order by sum/total desc ) ) where rn between 1 and 3";
-        //cara = st.executeQuery(query);
-    }catch(Exception e){
-            out.println(e);
-        }
-%>    
+   
 
 <div class="col-md-3">
 								<div class="row">
 									<div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="#"><img src="dummy/m1.png" alt="Movie 1"></a>
-										</div>
+											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+                                                                                        <%//=cara.next()%>
+                                                                                </div>
 									</div>
 									 <div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="#"><img src="dummy/m2.jpg" alt="Movie 2"></a>
+											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+                                                                                        <%//=cara.next()%>
 										</div>
 									</div> 
 								</div>
@@ -161,35 +134,41 @@
 						<div class="row">
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="#"><img src="dummy/m3.jpg" alt="Movie 3"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+                                                                                        <%//=cara.next()%>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="#"><img src="dummy/m2.jpg" alt="Movie 4"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+                                                                                        <%//=cara.next()%>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="#"><img src="dummy/m5.jpg" alt="Movie 5"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+                                                                                        <%//=cara.next()%>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="#"><img src="dummy/m6.jpg" alt="Movie 6"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+                                                                                        <%//=cara.next()%>
 								</div>
 							</div>
-						</div> 
-						
-						
-							
-							
+                                                    </div> 	
 						</div>
-					</div>
+                                        </div>
 				</div> <!-- .container -->
 			</div>
 
-
+<%
+    }
+    }
+    catch(Exception e){
+            out.println(e);
+        }
+%> 
             
 
 							

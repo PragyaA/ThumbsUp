@@ -28,11 +28,11 @@
 		<div id="site-content">
 			<header class="site-header">
 				<div class="container">
-					<a href="index.html" id="branding">
-						<img src="images/logo.png" alt="" class="logo">
+					<a href="index.jsp" id="branding">
+						<img src="dummy/logo.png" alt="" class="logo">
 						<div class="logo-copy">
-							<h1 class="site-title">Company Name</h1>
-							<small class="site-description">Tagline goes here</small>
+							<h1 class="site-title">ThumbsUp</h1>
+							<small class="site-description">Taste the Thunder!!</small>
 						</div>
 					</a> <!-- #branding -->
 

@@ -47,11 +47,11 @@
 		<div id="site-content">
 			<header class="site-header">
 				<div class="container">
-					<a href="index.html" id="branding">
-						<img src="images/logo.png" alt="" class="logo">
+					<a href="index.jsp" id="branding">
+						<img src="dummy/logo.png" alt="" class="logo">
 						<div class="logo-copy">
-							<h1 class="site-title">Company Name</h1>
-							<small class="site-description">Tagline goes here</small>
+							<h1 class="site-title">ThumbsUp</h1>
+							<small class="site-description">Taste the Thunder!!</small>
 						</div>
 					</a> <!-- #branding -->
 
@@ -60,8 +60,7 @@
 						<ul class="menu">
 							<li class="menu-item"><a href="index.jsp">Home</a></li>
 							<li class="menu-item"><a href="about.jsp">About</a></li>
-							<li class="menu-item current-menu-item"><a href="review.jsp">Movie reviews</a></li>
-							<li class="menu-item"><a href="joinus.jsp">Join us</a></li>
+							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
 						</ul> <!-- .menu -->
 
@@ -104,11 +103,15 @@ try{
 								<div class="col-md-12">
 									<h2 class="movie-title"><%=cara.getString("name")%></h2>
                                                                         <ul class="starring">
-			
+                                                                                <li><strong>Release Date:</strong> <%=cara.getString("premiere")%></li>
+                                                                                <li><strong>Category:</strong> <%=cara.getString("category")%></li>
+                                                                                <li><strong>Directors:</strong> <%=cara.getString("directors")%></li>
 										<li><strong>Stars:</strong> <%=cara.getString("starcast")%></li>
 									</ul>
 									<div class="movie-summary">
-										<p><%=cara.getString("detail")%></p>
+										<strong>Description:</strong><p><%=cara.getString("detail")%></p>
+                                                                                
+                                                                                <p>Find more information about <%=cara.getString("name")%> here <%=cara.getString("url")%> </p> . 
 
 									</div>
 									<ul class="movie-meta">

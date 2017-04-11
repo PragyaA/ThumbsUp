@@ -71,10 +71,10 @@
 			<header class="site-header">
 				<div class="container">
 					<a href="index.jsp" id="branding">
-						<img src="images/logo.png" alt="" class="logo">
+						<img src="dummy/logo.png" alt="" class="logo">
 						<div class="logo-copy">
-							<h1 class="site-title">Company Name</h1>
-							<small class="site-description">Tagline goes here</small>
+							<h1 class="site-title">ThumbsUp</h1>
+							<small class="site-description">Taste the Thunder!!</small>
 						</div>
 					</a> <!-- #branding -->
 
@@ -83,9 +83,9 @@
 						<ul class="menu">
 							<li class="menu-item"><a href="index.jsp">Home</a></li>
 							<li class="menu-item"><a href="about.jsp">About</a></li>
-							<li class="menu-item current-menu-item"><a href="review.jsp">Movie reviews</a></li>
-							<li class="menu-item"><a href="joinus.jsp">Join us</a></li>
+							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
+                                                        <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
 						<form action="#" class="search-form">
