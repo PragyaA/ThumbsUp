@@ -54,10 +54,20 @@
                     <div class="main-content">
                         <br><br>
                         <div class="container">
+                            <div class="page">
+                            <form align="center">
+                                
+                            <h3 align  = "center">SHOW CURRENT DATABASE</h3> 
+                            <input type="submit" class="btn btn-primary btn-lg" value="Show" onclick="form.action='showdb.jsp';">
+                            </form>
+                        </div>
+                    </div>
+                        <br><br>
+                        <div class="container">
                         <div class="page">
                         <form align="center">
-                            <h3 align  = "center">Add a movie</h3>
-                            Name : <input type="text" class="" name="name" placeholder="Name of movie" style="width:40%;"><br><br>
+                            <h3 align  = "center">ADD A MOVIE</h3>
+                            Name : <input type="text" class="" name="name" placeholder="" style="width:40%;"><br><br>
                             Release Date : <input type="text" class="" name="premiere" placeholder="" style="width:40%;"><br><br>
                             Category : <input type="text" class="" name="category" placeholder="" style="width:40%;"><br><br>
                             Directors : <input type="text" class="" name="directors" placeholder="" style="width:40%;"><br><br>
@@ -75,8 +85,8 @@
                             <div class="page">
                             <form align="center">
                                 
-                            <h3 align  = "center">Delete a movie</h3> 
-                            Name : <input type="text" class="" name="name2" placeholder="Name of movie" style="width:40%;"><br><br>
+                            <h3 align  = "center">DELETE A MOVIE</h3> 
+                            Name : <input type="text" class="" name="name2" placeholder="" style="width:40%;"><br><br>
                             <input type="submit" class="btn btn-primary btn-lg" value="DELETE" onclick="form.action='deletemovie.jsp';">
                             </form>
                         </div>
@@ -85,9 +95,9 @@
                     <div class="container">
                         <div class="page">
                             <form align="center">
-                            <h3 align  = "center">Edit a movie</h3>    
-                            Name : <input type="text" class="" name="name3" placeholder="Name of movie" style="width:40%;"><br><br>
-                            Column : <input type="text" class="" name="column_name" placeholder="Column to edit" style="width:40%;"><br><br>
+                            <h3 align  = "center">EDIT A MOVIE</h3>    
+                            Name : <input type="text" class="" name="name3" placeholder="" style="width:40%;"><br><br>
+                            Column : <input type="text" class="" name="column_name" placeholder="" style="width:40%;"><br><br>
                             Value : <input type="text" class="" name="column_val" placeholder="Value" style="width:40%;"><br><br>
                             <input type="submit" class="btn btn-primary btn-lg" value="EDIT" onclick="form.action='editmovie.jsp';">
                             

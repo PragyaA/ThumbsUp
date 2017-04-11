@@ -1,3 +1,22 @@
+<%-- 
+    Document   : main
+    Created on : 10 Apr, 2017, 12:02:11 PM
+    Author     : pragya
+--%>
+<%@ page import="java.sql.*" %>
+<%
+    Connection con = null;
+    String query;
+    ResultSet rs = null, cara = null;
+    Statement st = null;
+    try {
+    Class.forName("com.mysql.jdbc.Driver");
+    } catch (ClassNotFoundException e) {
+    e.printStackTrace();
+    }
+    
+    
+%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -43,6 +62,7 @@
 							<li class="menu-item"><a href="about.jsp">About</a></li>
 							<li class="menu-item current-menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
+                                                        <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
 						<form action="#" class="search-form">
@@ -58,68 +78,35 @@
 				<div class="container">
 					<div class="page">
 						<div class="breadcrumbs">
-							<a href="index.html">Home</a>
+							<a href="index.jsp">Home</a>
 							<span>Movie Review</span>
 						</div>
 
-						<!-- <div class="filters">
-							<select name="#" id="#" placeholder="Choose Category">
-								<option value="#">Action</option>
-								<option value="#">Drama</option>
-								<option value="#">Fantasy</option>
-								<option value="#">Horror</option>
-								<option value="#">Adventure</option>
-							</select>
-							<select name="#" id="#">
-								<option value="#">2012</option>
-								<option value="#">2013</option>
-								<option value="#">2014</option>
-							</select>
-						</div> -->
-						<div class="movie-list">
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/ml.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Maleficient</a></div>
-								<p>Maleficent is a kind-hearted fairy, who is deceived by the love of her life, Stefan.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/tin.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">The adventure of Tintin</a></div>
-								<p>Tintin and his dog Snowy unwittingly embark on an adventure with Captain Haddock to find an ancient treasure.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/hob.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Hobbit</a></div>
-								<p>Bilbo Baggins, a hobbit, is persuaded into accompanying a wizard and a group of dwarves on a journey to reclaim the city of Erebor and all its riches from the dragon Smaug.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/ex.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Exists</a></div>
-								<p>Five friends go to a forest in Texas for a camping trip but they do not know that something big is following them.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/dh.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Drive hard</a></div>
-								<p>Peter Roberts, a former race car driver, takes up the job of a beginner's training instructor due to personal reasons.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/rc.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Robocop</a></div>
-								<p>In a dystopic and crime-infested Detroit, a terminally injured policeman returns to the force as a potent cyborg haunted by submerged memories.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/lp.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">Life of Pi</a></div>
-								<p>Pi Patel finds a way to survive in a lifeboat that is adrift in the middle of nowhere. His fight against the odds is heightened by the company of a hyena and a male Bengal tiger.</p>
-							</div>
-							<div class="movie">
-								<figure class="movie-poster"><img src="dummy/tc.jpg" alt="#"></figure>
-								<div class="movie-title"><a href="single.html">The Colony</a></div>
-								<p>Due to machine failure, the climate becomes extremely cold and people take shelter in bunkers. Meanwhile they have a close encounter with cannibals.</p>
-							</div>
+<%
+    try{        
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ThumbsUp", "root", "thumbsup");
+        //query = "SELECT name FROM movies WHERE (rates*1.0/total IN (SELECT TOP (3) rates*1.0/total FROM movies as movies1 GROUP BY rates*1.0/total ORDER BY rates*1.0/total DESC))";
+        st = con.createStatement();
+        query = "SELECT * FROM movies";
+        cara = st.executeQuery(query);
+    
+    while(cara.next()){
+%>
+                                            <div class="row">
+							<div class="col-sm-6 col-md-2">
+								<div class="latest-movie">
+                                                        <a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img class="movie-poster" style="width: 100%; height: 270px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+                                                        <br>
+                                                        <span class=""><b><a href="single.jsp?movie_name=<%=cara.getString("name")%>"><%= cara.getString("name")%> </a></b></span>
+                                                        <br>
+                                                        <b>Star-cast : </b><%= cara.getString("starcast")%><p>
+                                                         
+                                                    </div>
+							
 						</div> <!-- .movie-list -->
+                                            
 
-						<!-- <div class="pagination">
+<!--						 <div class="pagination">
 							<a href="#" class="page-number prev"><i class="fa fa-angle-left"></i></a>
 							<span class="page-number current">1</span>
 							<a href="#" class="page-number">2</a>
@@ -128,7 +115,15 @@
 							<a href="#" class="page-number">5</a>
 							<a href="#" class="page-number next"><i class="fa fa-angle-right"></i></a>
 						</div> -->
-					</div>
+					
+<%
+    }
+    }
+    catch(Exception e){
+            out.println(e);
+        }
+%> 
+</div></div>
 				</div> <!-- .container -->
 			</main>
 			<footer class="site-footer">
@@ -140,28 +135,7 @@
 								<p>Total maniacs trying to do this lab project. We hope to get well soon.</p>
 							</div>
 						</div>
-						<!-- <div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Recent Review</h3>
-								<ul class="no-bullet">
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Sit amet consecture</a></li>
-									<li><a href="#">Dolorem respequem</a></li>
-									<li><a href="#">Invenore veritae</a></li>
-								</ul>
-							</div>
-						</div> -->
-						<!-- <div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Help Center</h3>
-								<ul class="no-bullet">
-									<li><a href="#"></a></li>
-									<li><a href="#">Sit amet consecture</a></li>
-									<li><a href="#">Dolorem respequem</a></li>
-									<li><a href="#">Invenore veritae</a></li>
-								</ul>
-							</div>
-						</div> -->
+						
 						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Join Us</h3>

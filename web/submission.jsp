@@ -133,16 +133,20 @@ try{
 								<div class="col-md-12">
 									<h2 class="movie-title"><%=cara.getString("name")%></h2>
                                                                         <ul class="starring">
-			
+                                                                                <li><strong>Release Date:</strong> <%=cara.getString("premiere")%></li>
+                                                                                <li><strong>Category:</strong> <%=cara.getString("category")%></li>
+                                                                                <li><strong>Directors:</strong> <%=cara.getString("directors")%></li>
 										<li><strong>Stars:</strong> <%=cara.getString("starcast")%></li>
 									</ul>
 									<div class="movie-summary">
-										<p><%=cara.getString("detail")%></p>
+										<strong>Description:</strong><p><%=cara.getString("detail")%></p>
+                                                                                
+                                                                                <p>Find more information about <%=cara.getString("name")%> <a href="<%=cara.getString("url")%>">here</a>.</p> . 
 
 									</div>
 									<ul class="movie-meta">
 										<li><strong>Rating:</strong> 
-											<div><span style="width:80%"><strong><%=cara.getInt("rates")*1.0/cara.getInt("total")%></strong> out of 5</span></div>
+											<div><span style="width:80%"><strong><%=(double) Math.round(cara.getInt("rates")*1.0/cara.getInt("total")* 100) / 100%></strong> out of 5</span></div>
 										</li>
                                                                              
 									</ul>

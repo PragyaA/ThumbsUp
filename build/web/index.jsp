@@ -112,20 +112,14 @@
 	
    
 
-<div class="col-md-3">
+                                                        <div class="col-md-3">
 								<div class="row">
 									<div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
                                                                                 </div>
 									</div>
-									 <div class="col-sm-6 col-md-12">
-										<div class="latest-movie">
-											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
-                                                                                        <%//=cara.next()%>
-										</div>
-									</div> 
 								</div>
 							</div>
 						</div> <!-- .row -->
@@ -134,25 +128,25 @@
 						<div class="row">
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>

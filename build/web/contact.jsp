@@ -43,7 +43,8 @@
 							<li class="menu-item"><a href="about.jsp">About</a></li>
 							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item current-menu-item"><a href="contact.jsp">Contact</a></li>
-						</ul> <!-- .menu -->
+                                                        <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
+                                                </ul> <!-- .menu -->
 
 						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">

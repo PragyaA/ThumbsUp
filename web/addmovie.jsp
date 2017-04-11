@@ -136,6 +136,10 @@ else {
 <%
 }
 %>
+<br><br>
+                        <form align="center">
+                            <input type="submit" class="btn btn-primary btn-lg" value="BACK" onclick="form.action='options.jsp';">
+                        </form>
                </div>
         </body>
 </html>

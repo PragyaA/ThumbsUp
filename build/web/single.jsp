@@ -88,6 +88,7 @@ try{
         //query = "SELECT name FROM movies WHERE (rates*1.0/total IN (SELECT TOP (3) rates*1.0/total FROM movies as movies1 GROUP BY rates*1.0/total ORDER BY rates*1.0/total DESC))";
         st = con.createStatement();
         query = "SELECT * FROM movies where name = '"+movie_name+"'";
+        
         cara = st.executeQuery(query);
         //if(cara.next()) {
     
@@ -111,12 +112,12 @@ try{
 									<div class="movie-summary">
 										<strong>Description:</strong><p><%=cara.getString("detail")%></p>
                                                                                 
-                                                                                <p>Find more information about <%=cara.getString("name")%> here <%=cara.getString("url")%> </p> . 
+                                                                                <p>Find more information about <%=cara.getString("name")%> <a href="<%=cara.getString("url")%>">here</a>.</p> . 
 
 									</div>
 									<ul class="movie-meta">
 										<li><strong>Rating:</strong> 
-											<div><span style="width:80%"><strong><%=cara.getInt("rates")*1.0/cara.getInt("total")%></strong> out of 5</span></div>
+											<div><span style="width:80%"><strong><%=(double) Math.round(cara.getInt("rates")*1.0/cara.getInt("total")* 100) / 100%></strong> out of 5</span></div>
 										</li>
                                                                                 <form action="submission.jsp">
                                                                                 <li><strong>Please give your Rating:</strong> 
