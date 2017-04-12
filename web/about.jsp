@@ -46,10 +46,10 @@
                                                         <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
                                                 </ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
@@ -65,7 +65,7 @@
 
 						<div class="row">
 							<div class="col-md-4">
-								<figure><img src="dummy/logo.jpg" alt="ThumbsUp"></figure>
+								<figure><img style="width: 300px; height: 300px;" src="dummy/logo.png" alt="ThumbsUp"></figure>
 							</div>
 							<div class="col-md-8">
 								<p class="leading">Spreading movie mania - Rate and Share a movie among friends!</p>
@@ -100,7 +100,7 @@
 
 							<div class="col-md-2">
 								<div class="team">
-									<figure class="team-image"><img src="dummy/1.jpg" alt=""></figure>
+									<figure class="team-image"><img style="width: 180px; height: 180px;" src="dummy/1.jpg" alt=""></figure>
 									<h2 class="team-name">Pragya Anand</h2>
 									<small class="team-title">Popeye</small>
 									<div class="social-links">
@@ -113,7 +113,7 @@
 							</div>
 							<div class="col-md-2">
 								<div class="team">
-									<figure class="team-image"><img src="dummy/2.jpg" alt=""></figure>
+									<figure class="team-image"><img style="width: 180px; height: 180px;" src="dummy/2.jpg" alt=""></figure>
 									<h2 class="team-name">Archita Surai</h2>
 									<small class="team-title">Archies</small>
 									<div class="social-links">
@@ -126,7 +126,7 @@
 							</div>
 							<div class="col-md-2">
 								<div class="team">
-									<figure class="team-image"><img src="dummy/3.jpg" alt=""></figure>
+									<figure class="team-image"><img style="width: 180px; height: 180px;" src="dummy/3.jpg" alt=""></figure>
 									<h2 class="team-name">Shrija Mishra</h2>
 									<small class="team-title">Scooby-Doo</small>
 									<div class="social-links">
@@ -139,7 +139,7 @@
 							</div>
 							<div class="col-md-2">
 								<div class="team">
-									<figure class="team-image"><img src="dummy/4.jpg" alt=""></figure>
+									<figure class="team-image"><img style="width: 180px; height: 180px;" src="dummy/4.jpg" alt=""></figure>
 									<h2 class="team-name">Shreya Ghosh</h2>
 									<small class="team-title">Spongebob</small>
 									<div class="social-links">
@@ -152,7 +152,7 @@
 							</div>
 							<div class="col-md-2">
 								<div class="team">
-									<figure class="team-image"><img src="dummy/5.jpg" alt=""></figure>
+									<figure class="team-image"><img style="width: 180px; height: 180px;" src="dummy/5.jpg" alt=""></figure>
 									<h2 class="team-name">Tannu Verma</h2>
 									<small class="team-title">Tom</small>
 									<div class="social-links">
@@ -165,7 +165,7 @@
 							</div>
 							<div class="col-md-2">
 								<div class="team">
-									<figure class="team-image"><img src="dummy/6.png" alt=""></figure>
+									<figure class="team-image"><img style="width: 180px; height: 180px;" src="dummy/6.png" alt=""></figure>
 									<h2 class="team-name">Ankita Sinha</h2>
 									<small class="team-title">Ash-Ketchum</small>
 									<div class="social-links">
@@ -190,28 +190,7 @@
 								<p>Total maniacs trying to do this lab project. We hope to get well soon.</p>
 							</div>
 						</div>
-						<!-- <div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Recent Review</h3>
-								<ul class="no-bullet">
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Sit amet consecture</a></li>
-									<li><a href="#">Dolorem respequem</a></li>
-									<li><a href="#">Invenore veritae</a></li>
-								</ul>
-							</div>
-						</div> -->
-						<!-- <div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Help Center</h3>
-								<ul class="no-bullet">
-									<li><a href="#"></a></li>
-									<li><a href="#">Sit amet consecture</a></li>
-									<li><a href="#">Dolorem respequem</a></li>
-									<li><a href="#">Invenore veritae</a></li>
-								</ul>
-							</div>
-						</div> -->
+						
 						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Join Us</h3>

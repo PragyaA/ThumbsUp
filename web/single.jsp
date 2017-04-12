@@ -62,13 +62,14 @@
 							<li class="menu-item"><a href="about.jsp">About</a></li>
 							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
+                                                        <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
 						</form>n><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
@@ -78,8 +79,8 @@
 				<div class="container">
 					<div class="page">
 						<div class="breadcrumbs">
-							<a href="index.html">Home</a>
-							<a href="review.html">Movie Review</a>
+							<a href="index.jsp">Home</a>
+							<a href="review.jsp">Movie Review</a>
 							
                                             
 <%                                            
@@ -99,7 +100,7 @@ try{
 						<div class="content">
 							<div class="row">
 								<div class="col-md-12">
-									<figure class="movie-poster"><img src="Resources/<%=cara.getString("name")%>_land.jpg" alt="#"></figure>
+									<figure class="movie-poster"><img style = "width: 100%; height: 600px; "src="Resources/<%=cara.getString("name")%>_land.jpg" alt="#"></figure>
 								</div>
 								<div class="col-md-12">
 									<h2 class="movie-title"><%=cara.getString("name")%></h2>
@@ -117,12 +118,12 @@ try{
 									</div>
 									<ul class="movie-meta">
 										<li><strong>Rating:</strong> 
-											<div><span style="width:80%"><strong><%=(double) Math.round(cara.getInt("rates")*1.0/cara.getInt("total")* 100) / 100%></strong> out of 5</span></div>
+											<div><span style="width:80%"><strong><%=(double) Math.round(cara.getInt("rates")*1.0/cara.getInt("total")* 100) / 100%></strong> out of 5</span> (<%=cara.getInt("total")%> reviews)</div>
 										</li>
                                                                                 <form action="submission.jsp">
                                                                                 <li><strong>Please give your Rating:</strong> 
                                                                                     <input name="movie_name" type="hidden" value="<%=cara.getString("name")%>"></input>
-                                                                                    <input type="text" class="" name="user_rating" placeholder="Rate out of 5" style="width:20%;">
+                                                                                    <input type="text" class="" name="user_rating" placeholder="0 to 5" style="width:20%;">
                                                                                     <button type="submit" value="Submit" class="btn btn-primary btn-lg">SUBMIT</button>
 										</li>
                                                                                 </form>

@@ -43,10 +43,10 @@
                                                         <li class="menu-item current-menu-item"><a href="admin_auth.jsp">Admin</a></li>
                                                 </ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>

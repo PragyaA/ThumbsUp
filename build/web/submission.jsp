@@ -104,8 +104,8 @@
 				<div class="container">
 					<div class="page">
 						<div class="breadcrumbs">
-							<a href="index.html">Home</a>
-							<a href="review.html">Movie Review</a>
+							<a href="index.jsp">Home</a>
+							<a href="review.jsp">Movie Review</a>
 							
                                             
 <%                                            
@@ -128,7 +128,7 @@ try{
                                                             </div>
                                                             <hr>
 								<div class="col-md-12">
-									<figure class="movie-poster"><img src="Resources/<%=cara.getString("name")%>_land.jpg" alt="#"></figure>
+									<figure class="movie-poster"><img style = "width: 100%; height: 600px; " src="Resources/<%=cara.getString("name")%>_land.jpg" alt="#"></figure>
 								</div>
 								<div class="col-md-12">
 									<h2 class="movie-title"><%=cara.getString("name")%></h2>
@@ -146,7 +146,7 @@ try{
 									</div>
 									<ul class="movie-meta">
 										<li><strong>Rating:</strong> 
-											<div><span style="width:80%"><strong><%=(double) Math.round(cara.getInt("rates")*1.0/cara.getInt("total")* 100) / 100%></strong> out of 5</span></div>
+											<div><span style="width:80%"><strong><%=(double) Math.round(cara.getInt("rates")*1.0/cara.getInt("total")* 100) / 100%></strong> out of 5</span> (<%=cara.getInt("total")%> reviews)</div>
 										</li>
                                                                              
 									</ul>

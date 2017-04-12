@@ -46,10 +46,10 @@
                                                         <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
                                                 </ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
@@ -63,97 +63,80 @@
 							<span>Contact</span>
 						</div>
 
-						<div class="content">
+                                            <div class="content">
 							<div class="row">
+                                                            <div class="col-md-4"></div>
 								<div class="col-md-4">
 									<h2>Contact</h2>
 									<ul class="contact-detail">
 										<li>
 											<img src="images/icon-contact-map.png" alt="#">
-											<address><span>Company name. INC</span> <br>550 Avenue Street, New york</address>
+											<address><span>Thumbs Up</span> <br>Cartoon Network, Milky Way Galaxy</address>
 										</li>
 										<li>
 											<img src="images/icon-contact-phone.png" alt="">
-											<a href="tel:1590912831">+1 590 912 831</a>
+											<a href="tel:08888888888">08888888888</a>
 										</li>
 										<li>
 											<img src="images/icon-contact-message.png" alt="">
-											<a href="mailto:contact@companyname.com">contact@companyname.com</a>
+											<a href="mailto:contact@companyname.com">passta@thumbsup.com</a>
 										</li>
 									</ul>
 									<div class="contact-form">
-										<input type="text" class="name" placeholder="name...">
+										<input type="text" class="name" placeholder="name..." maxwidth="30%">
 										<input type="text" class="email" placeholder="email...">
 										<input type="text" class="website" placeholder="website...">
 										<textarea class="message" placeholder="message..."></textarea>
 										<input type="submit" value="Send Message ">
 
-									</div>
+									</div>                               
+
 								</div>
-								<div class="col-md-7 col-md-offset-1">
+<!--								<div class="col-md-7 col-md-offset-1">
 									<div class="map"></div>
-								</div>
+								</div>-->
 							</div>
-						</div>
+                                           </div>
+                                                 
 					</div>
 				</div> <!-- .container -->
 			</main>
 			<footer class="site-footer">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+								<p>Total maniacs trying to do this lab project. We hope to get well soon.</p>
 							</div>
 						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Recent Review</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="widget">
-								<h3 class="widget-title">Help Center</h3>
-								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
+						
+						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Join Us</h3>
 								<ul class="no-bullet">
-									<li>Lorem ipsum dolor</li>
-									<li>Sit amet consecture</li>
-									<li>Dolorem respequem</li>
-									<li>Invenore veritae</li>
+									<li><a href="#">We are hiring</a></li>
+									<li><a href="#">Frontend</a></li>
+									<li><a href="#">Backend</a></li>
+									<li><a href="#">Fund us please</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Social Media</h3>
 								<ul class="no-bullet">
-									<li>Facebook</li>
-									<li>Twitter</li>
-									<li>Google+</li>
-									<li>Pinterest</li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Twitter</a></li>
+									<li><a href="#">Google+</a></li>
+									<li><a href="#">Pinterest</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Newsletter</h3>
+								Be updated movie freaks!!
 								<form action="#" class="subscribe-form">
 									<input type="text" placeholder="Email Address">
 								</form>
@@ -161,7 +144,7 @@
 						</div>
 					</div> <!-- .row -->
 
-					<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
+					<div class="colophon">Copyright ThumbsUpTeam, Designed by PASSTA. All rights reserved</div>
 				</div> <!-- .container -->
 
 			</footer>
@@ -171,7 +154,7 @@
 
 
 		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true&amp;language=en"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
 		

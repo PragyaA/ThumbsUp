@@ -34,16 +34,17 @@
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="index.jsp">Home</a></li>
+							<li class="menu-item"><a href="index.jsp">Home</a></li>
 							<li class="menu-item"><a href="about.jsp">About</a></li>
 							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
+                                                        <li class="menu-item current-menu-item"><a href="index.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
@@ -63,11 +64,10 @@
     e.printStackTrace();
     }
     
-    //String action = request.getParameter("action");
     String movie_name = request.getParameter("name");
     String premiere = request.getParameter("premiere");
     String category = request.getParameter("category");
-    String director = request.getParameter("director");
+    String director = request.getParameter("directors");
     String starcast = request.getParameter("starcast");
     String description = request.getParameter("description");
     String wikipedia_url = request.getParameter("wikipedia_url");
@@ -99,14 +99,8 @@
             +"','"+image_url+"')";
      
     int res = st.executeUpdate(query);
-    }
-    catch(Exception e){
-            //out.println(e);
-            //ex=e;
-            error=1;
-    } 
-    if(error==0)
-    {
+    
+    
 %>
                     <div class="main-content">
                         <div>
@@ -116,8 +110,12 @@
                     </div>
  
 <%
-    }
-else {
+}
+    catch(Exception e){
+            out.println(e);
+            //ex=e;
+            error=1;
+    
 %>
 
 <div class="main-content">

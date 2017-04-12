@@ -65,10 +65,10 @@
                                                         <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
@@ -95,7 +95,17 @@
                                             <div class="row">
 							<div class="col-sm-6 col-md-2">
 								<div class="latest-movie">
-                                                        <a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img class="movie-poster" style="width: 100%; height: 270px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+                                                                    <% if(cara.getString("image")==null || cara.getString("image").equals("")) {
+                                                                        %>
+                                                                    
+                                                        <a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img class="movie-poster" style="width: 75%; height: 200px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+                                                        <% }
+else
+{
+%>
+                                                        <a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img class="movie-poster" style="width: 75%; height: 200px;" src= "<%= cara.getString("image")%>" alt="Slide"></a>
+                                                        <% }
+%>
                                                         <br>
                                                         <span class=""><b><a href="single.jsp?movie_name=<%=cara.getString("name")%>"><%= cara.getString("name")%> </a></b></span>
                                                         <br>

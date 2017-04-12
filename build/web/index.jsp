@@ -70,10 +70,10 @@
                                                         <li class="menu-item"><a href="admin_auth.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
@@ -82,8 +82,7 @@
 
 
 
-<%
-    try{        
+<%       
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ThumbsUp", "root", "thumbsup");
         //query = "SELECT name FROM movies WHERE (rates*1.0/total IN (SELECT TOP (3) rates*1.0/total FROM movies as movies1 GROUP BY rates*1.0/total ORDER BY rates*1.0/total DESC))";
         st = con.createStatement();
@@ -100,56 +99,79 @@
 							<div class="col-md-9">
 								<div class="slider">
 									<ul class="slides">
-										<li><a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a></li>
+										<li><a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 500px;" src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a></li>
                                                                                 <%=cara.next()%>
-                                                                                <li><a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a></li>
+                                                                                <li><a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 500px;" src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a></li>
                                                                                 <%=cara.next()%>
-                                                                                <li><a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a></li>
-                                                                                <%=cara.next()%>
+                                                                                <li><a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 500px;" src= "Resources/<%= cara.getString("name")%>_land.jpg" alt="Slide"></a></li>
+                                                                                
 									</ul>
 								</div>
 							</div>
 	
    
-
+                                                    <% }
+                                                        if(cara.next()) {
+                                                            
+                                                      %>
                                                         <div class="col-md-3">
 								<div class="row">
 									<div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
-                                                                                        <%//=cara.next()%>
+                                                                                    
+											<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 500px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+                                                                                        
                                                                                 </div>
 									</div>
 								</div>
 							</div>
 						</div> <!-- .row -->
+                                                <% }
+if(cara.next()) {
+                                                            
+                                                      %>
                                                 
                                                 
 						<div class="row">
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
-                                                                                        <%//=cara.next()%>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 400px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+                                                                                        
 								</div>
 							</div>
+                                                                         <% }
+if(cara.next()) {
+                                                            
+                                                      %>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 400px;"src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>
+                                                                 <% }
+if(cara.next()) {
+                                                            
+                                                      %>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 400px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide" height="500px"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>
+                                                                 <% }
+if(cara.next()) {
+                                                            
+                                                      %>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
+									<a href="single.jsp?movie_name=<%=cara.getString("name")%>"> <img style="width: 100%; height: 400px;" src= "Resources/<%= cara.getString("name")%>_port.jpg" alt="Slide"></a>
                                                                                         <%//=cara.next()%>
 								</div>
 							</div>
+                                                                 <% }
+                                                            
+                                                      %>
                                                     </div> 	
 						</div>
                                         </div>
@@ -157,11 +179,7 @@
 			</div>
 
 <%
-    }
-    }
-    catch(Exception e){
-            out.println(e);
-        }
+
 %> 
             
 

@@ -29,6 +29,7 @@
                         table-layout: auto;
                         border-collapse: collapse;
                         width: 100%;
+                        color:#ffffff;
                     }
                     table td {
                         border: 1px solid #ccc;
@@ -46,7 +47,7 @@
                     }
 
                     .table-title h3 {
-                       color: #fafafa;
+                       color: #ffffff;
                        font-size: 30px;
                        font-weight: 200;
                        font-style: normal;
@@ -77,16 +78,17 @@
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="index.jsp">Home</a></li>
+							<li class="menu-item"><a href="index.jsp">Home</a></li>
 							<li class="menu-item"><a href="about.jsp">About</a></li>
 							<li class="menu-item"><a href="review.jsp">Movie reviews</a></li>
 							<li class="menu-item"><a href="contact.jsp">Contact</a></li>
+                                                        <li class="menu-item current-menu-item"><a href="index.jsp">Admin</a></li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
+<!--						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>
+						</form>-->
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
